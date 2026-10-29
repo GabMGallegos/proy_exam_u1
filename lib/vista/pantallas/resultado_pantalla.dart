@@ -8,7 +8,6 @@ class ResultadoPantalla extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Recupera el modelo enviado mediante arguments.
     final resultado =
         ModalRoute.of(context)!.settings.arguments as EstacionamientoModelo;
     return Scaffold(
@@ -36,10 +35,8 @@ class ResultadoPantalla extends StatelessWidget {
                   'Total a pagar: \$${resultado.total.toStringAsFixed(2)}',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                // Para mostrar otro dato del modelo, agrega aquí un Text.
                 SizedBox(height: 20),
                 ElevatedButton(
-                  // pop vuelve al formulario conservando sus datos.
                   onPressed: () => Navigator.pop(context),
                   child: Text('Volver'),
                 ),

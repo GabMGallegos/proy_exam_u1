@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Provider comparte el VM con las vistas y libera su instancia al salir.
     return ChangeNotifierProvider(
       create: (_) => EstacionamientoViewModel(),
       child: MaterialApp(
@@ -23,7 +22,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-          // Estilo compartido por los encabezados de las tres pantallas.
           appBarTheme: AppBarTheme(
             backgroundColor: Colors.black,
             foregroundColor: Colors.white,
@@ -35,7 +33,6 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        // Las tres pantallas del examen se registran como rutas nombradas.
         initialRoute: '/',
         routes: {
           '/': (_) => InicioPantalla(),

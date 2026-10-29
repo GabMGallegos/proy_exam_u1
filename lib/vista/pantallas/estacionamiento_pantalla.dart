@@ -14,11 +14,9 @@ class EstacionamientoPantalla extends StatefulWidget {
 
 class _EstacionamientoPantallaState extends State<EstacionamientoPantalla> {
   final horasController = TextEditingController();
-  // Declara aquí los controllers de los campos que agregues al formulario.
 
   @override
   void dispose() {
-    // Libera también los controllers que agregues.
     horasController.dispose();
     super.dispose();
   }
@@ -42,16 +40,13 @@ class _EstacionamientoPantallaState extends State<EstacionamientoPantalla> {
       );
       return;
     }
-    // read obtiene el VM para ejecutar una acción sin escuchar cambios.
     final vm = context.read<EstacionamientoViewModel>();
     final resultado = vm.calcular(horas);
-    // arguments lleva el modelo desde la pantalla principal al resultado.
     Navigator.pushNamed(context, '/resultado', arguments: resultado);
   }
 
   @override
   Widget build(BuildContext context) {
-    // watch actualiza la vista cuando el VM llama a notifyListeners().
     final vm = context.watch<EstacionamientoViewModel>();
     return Scaffold(
       appBar: AppBar(title: Text('Estacionamiento')),

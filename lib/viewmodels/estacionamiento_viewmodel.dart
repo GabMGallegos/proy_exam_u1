@@ -7,7 +7,6 @@ class EstacionamientoViewModel extends ChangeNotifier {
 
   void seleccionarTipo(String tipo) {
     tipoVehiculo = tipo;
-    // Avisa a las vistas que escuchan con context.watch().
     notifyListeners();
   }
 

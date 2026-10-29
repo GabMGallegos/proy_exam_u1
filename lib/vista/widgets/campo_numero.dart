@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// Diseño atómico: molécula con etiqueta y entrada, dentro de vista/widgets.
 class CampoNumero extends StatelessWidget {
   final String etiqueta;
   final TextEditingController controller;

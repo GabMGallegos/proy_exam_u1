@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// Diseño atómico: átomo reutilizable para cada opción del vehículo.
 class OptionButton extends StatelessWidget {
   final String titulo;
   final String valor;
