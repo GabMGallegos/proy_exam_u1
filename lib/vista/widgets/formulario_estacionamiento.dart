@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'campo_numero.dart';
 import 'option_button.dart';
 
-// Organismo de diseño atómico: agrupa los campos sin calcular el costo.
-// MVVM con Provider sigue siendo la estructura principal.
 class FormularioEstacionamiento extends StatelessWidget {
   final TextEditingController horasController;
   final String seleccionado;
